@@ -1,0 +1,12 @@
+version: "3"
+services:
+    rails:
+        build:
+            context: .
+            dockerfile: ./Dockerfile
+        volumes:
+        # Laravelプロジェクトと繋ぐ
+        - ./var/www:/var/www
+        ports:
+        - 58710:80
+        tty: true
